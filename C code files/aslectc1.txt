@@ -1,0 +1,127 @@
+*wap to calculate per.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+	float mar,sci,eng,c,java,per,total;
+	printf("enter");
+	scanf("%f%f%f%f%f",&mar,&sci,&eng,&c,&java);
+	total=mar+sci+eng+c+java;
+	per=total/500*100;
+	printf("per=%f",per);
+	getch();
+}
+
+*operator:-
+opertaor are used to perform specific opertion.
+
+a+b;
+a,b=oprand
++= opetor
+
+1:- arithmatic op:-
++,-,*,/,%.
+
+2:- relational op:-
+relational op used to check the relation between two values.
+
+1:-(>)= greater than.
+2:-(<)=less than.
+3:-(>=)=greter than or equal to.
+4:-(<=)=less than or equal to.
+5:- (!=)= not equallto.
+
+ex:-
+a=10,b=20;
+a>b-------f
+a<b-------t
+a>=b-------f
+a<=b-------t
+a!=b-------t
+
+*increment/deccrement op:-
+
+1:-prefix= first value assign then incr/decr by one.
+
+i++;
+i--;
+
+ex:-
+a=10,b;
+a=b=10+1=11.
+a=b=10-1=9.
+
+2:-postix= first ince/decr by one then value assign.
+++i;--i;
+
+ex:-
+x=10,y;
+x=10+1=11=y;
+x=10-1=9=y;
+
+*logical op:-
+logical op used to check the relation between two or more values.
+
+1:-(&&) AND op:-
+a=10,b=20;
+(a>b && a<b)------f
+
+eq1 eq2 res
+t    f   f
+f    t   f
+t    t   t
+f    f   f
+
+2:-(||) OR op:-
+x=10,y=20;
+(x>y || x<y)--------t
+
+eq1 eq2 res
+t    f   t
+f    t   t
+t    t   t
+f    f   f
+
+3:- (!) NOT op:-
+eq1  res
+t     f
+f     t
+
+*assignment op:-
+used to assign the value.
+
+(+=)------a+=b
+(-=)------a-=b
+(*=)------a*=b
+(%=)------a%=b
+(==)-------(a=10,b=10)(a==b)
+
+*ternory op:
+
+used to test codition.
+syntax:-
+eq1 ? eq2:eq3;
+
+ex:-
+a=10,b=20;
+(a>b)?printf("a is gretaee"):printf("a is less");
+
+*wap to find greater no among two vcalues:-
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+int a,b;
+printf("enter");
+scanf("%d%d",&a,&b);
+(a>b)?printf(" a is greatee than b"):printf("a is less than b");
+getch();
+}
+
+*assingmnet:
+1:- wap to check the no is positive or negative.
+2:- wap to ceck the given no is even or odd.
+3:- wap to check given char is ovwel or not
+

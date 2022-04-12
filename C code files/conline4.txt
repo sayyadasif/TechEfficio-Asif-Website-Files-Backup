@@ -1,0 +1,100 @@
+*wap to check the no is +ve or _ve.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+	int a;
+	printf("enter");
+	scanf("%d",&a);
+	(a>0)?printf("no is +ve"):printf("no is -ve");
+	getch();
+
+}
+
+* wap to check the given no is even or odd.
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+	int a;
+	printf("enter");
+	scanf("%d",&a);
+	(a%2==0)?printf("even"):printf("odd");
+	getch();
+}
+
+*wap to check the char is ovwel or not.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+	char ch;
+	printf("enter");
+	scanf("%c",&ch);
+	(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')?printf("ovwel"):printf("not ovwel");
+	getch();
+}
+
+
+
+*switch case:-
+
+switch is also called as a branch statment and it is case sensetive.
+break keywoerd is used.
+syntax:-
+
+switch(variable)
+{
+case 1:
+//code;
+break;
+case 2:
+//code;
+break;
+
+defalut:
+//codee;
+break;
+}
+
+
+*wap to chehck the char is ovwel or not.
+
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+
+char ch;
+printf("Enter");
+scanf("%c",&ch);
+switch(ch)
+{
+case 'a':
+printf("ovwel");
+break;
+case 'e':
+printf("ovwel");
+break;
+case 'i':
+printf("ovwel");
+break;
+case 'o':
+	printf("ovwel");
+	break;
+	case 'u':
+		printf("ovwel");
+		break;
+defalut:
+printf("npot ovwel");
+break;
+}
+getch();
+}
+
+*wap to accpet choice from user and display week days.
+*wap to accpet choice from user and display month.
+*wap accpt arithmatic op and dispaly op.

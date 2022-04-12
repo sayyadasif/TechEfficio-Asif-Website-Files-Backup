@@ -1,0 +1,56 @@
+*switch case:
+
+switch case is used to test the multiple conditions.
+switch is the case senstive or branch statement.
+break keyword is used.
+syntax:
+
+switch(variable)
+{
+case 1:
+//code;
+break;
+case 2:
+//code;
+break;
+//
+//
+//
+default:
+//code;
+break;
+}
+
+
+
+*wap to check the char is ovwel or not.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+	char ch;
+	printf("Enter");
+	scanf("%c",&ch);
+	switch(ch)
+	{
+		case 'a':
+		case'e':
+			case'i':
+				case'o':
+					case 'u':
+						printf("ovwel");
+						break;
+						default:
+							printf("not vowel");
+							break;
+						}
+						
+getch();
+
+}
+
+*assingment:-
+wap to display weekdays.
+wap to check month.
+wap accspt arithmatic op and perfrom op
