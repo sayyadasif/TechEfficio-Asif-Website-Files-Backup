@@ -1,0 +1,53 @@
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+namespace ConsoleApp10
+{
+    class Program
+    {
+        public class Department
+        {
+            public int deptno { get; set; }
+            public string deptname { get; set; }
+        }
+        public class Employee
+        {
+            public int empid { get; set; }
+            public string empname { get; set; }
+            public int deptno { get; set; }
+        }
+      
+
+        static void Main(string[] args)
+        {
+            List<Department> deptobj = new List<Department>()
+            {
+                new Department(){deptno=1,deptname="sales"},
+                new Department(){deptno=2,deptname="Developement"},
+                new Department(){deptno=3,deptname="Testing"},
+            };
+
+            List<Employee> empobj = new List<Employee>()
+            {
+                new Employee(){empid=101,empname="sanju",deptno=1},
+                new Employee(){empid=102,empname="Gopi",deptno=1},
+                new Employee(){empid=103,empname="Pintu",deptno=2},
+                new Employee(){empid=103,empname="cintu"}
+            };
+            var result = from d in deptobj
+                         join e in empobj
+                         on d.deptno equals e.deptno
+                         select new
+                         {
+                             EmployeeName = e.empname,
+                             DepartmentName = d.deptname
+                         };
+            foreach(var item in result)
+            {
+                Console.WriteLine("Name: "+item.EmployeeName+" DepartmentName: "+item.DepartmentName);
+            }
+
+        }
+    }
+}

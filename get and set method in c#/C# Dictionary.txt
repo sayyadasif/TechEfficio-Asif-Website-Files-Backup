@@ -1,0 +1,30 @@
+using System;
+using System.Collections; //namespace required for arraylist nongeneric collection type
+using System.Collections.Generic;//namespace required for generic collection type 
+
+namespace Collection
+{
+    class Program
+    {
+        //c# dicttionary is one of the generic collection 
+        static void Main(string[] args)
+        {
+
+            IDictionary<int, string> NumberNames = new Dictionary<int, string>();
+            NumberNames.Add(1, "one");
+            NumberNames.Add(2, "two");
+            NumberNames.Add(3, "three");
+            foreach(KeyValuePair<int,string> kvp in NumberNames)
+            {
+                Console.WriteLine(" key = "+kvp.Key+" value = "+kvp.Value);
+            }
+            Console.WriteLine(NumberNames[2]);
+            string result;
+           if (NumberNames.TryGetValue(3,out result))
+            {
+                Console.WriteLine("Result ="+ result);
+            }
+
+        }
+    }
+}

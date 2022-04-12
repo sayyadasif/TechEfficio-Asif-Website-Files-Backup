@@ -1,0 +1,24 @@
+sealed class
+
+using System;
+
+namespace ConsoleApp7
+{
+
+    public sealed class sample
+    {
+        public void display()
+        {
+            Console.WriteLine("This is sealed class");
+        }
+    }
+    class Program
+    {
+       static void Main(string[] args)
+        {
+            sample obj = new sample();
+            obj.display();
+           
+        }
+    }
+}

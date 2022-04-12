@@ -1,0 +1,35 @@
+using System;
+
+namespace ConsoleApp7
+{
+    class basedemo
+    {
+      public virtual void show()
+        {
+            Console.WriteLine("this is base class");
+        }
+    }
+
+    class deriverdemo:basedemo
+    {
+        public override void show()
+        {
+            base.show();
+            Console.WriteLine("this is derived class");
+        }
+
+    }
+
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            deriverdemo obj1 = new deriverdemo();
+            obj1.show();
+
+            basedemo baseref = new deriverdemo();
+            baseref.show();
+        }
+    }
+}

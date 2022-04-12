@@ -1,0 +1,8 @@
+Three Tyer 
+
+UI==Presentation Layer
+Busseness Logic Layer==BAL
+Data Access Layer==DAL
+
+
+IOC=Inversion Of Conversion

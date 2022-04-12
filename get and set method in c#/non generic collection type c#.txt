@@ -1,0 +1,31 @@
+using System;
+using System.Collections; //namespace required for arraylist nongeneric collection type
+
+namespace Collection
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ArrayList arraylistobj = new ArrayList(); //obj we created 
+            arraylistobj.Add(10);
+            arraylistobj.Add("asif");
+            arraylistobj.Add(200);
+            Console.WriteLine("The first arraylist is " + arraylistobj[0]);
+            Console.WriteLine("The Values Are");
+            for(int i = 0; i < arraylistobj.Count; i++)//for loop we are using for display the all values in the given arraylist
+            {
+                Console.WriteLine(arraylistobj[i]);
+            }
+
+          
+            arraylistobj.Remove(10);
+            Console.WriteLine("The Values  After Removing The 10 ");
+            for (int i = 0; i < arraylistobj.Count; i++)//for loop we are using for display the all values in the given arraylist
+            {
+                Console.WriteLine(arraylistobj[i]);
+            }
+
+        }
+    }
+}

@@ -1,0 +1,25 @@
+Sql Functions
+1-Built In Function
+2-User Defined Function
+
+..............................
+
+Types Of Built In Function
+1-Group Function 
+2-Scalar Function
+
+Group Function
+----------------------------------
+AVG()
+SUM()
+MIN()
+MAX()
+Count()
+------------------------------------
+
+Scalar Function ----If You Want To Execute A Scalar Function You Need Atleast One Row (Single Row )
+1-Char Function
+2-Numeric Function
+3-Date Function
+4-Conversion Function
+

@@ -1,0 +1,59 @@
+using System;
+
+namespace ConsoleApp7
+{
+
+    class students
+    {
+
+        public int stdid { get; set; }
+        public string stdname { get; set; }
+        public string stdgmail { get; set; }
+
+    //    private string stdname;
+    //    private int stdid;
+
+    //    public int Stdid
+    //    {
+    //        set
+    //        {
+    //            Console.WriteLine("This is Set accesser for stdid ");
+    //            stdid = value;
+
+    //        }
+    //        get
+    //        {
+    //            Console.WriteLine("This is Get accesser for stdid ");
+    //            return stdid;
+    //        }
+    //    }
+
+    //    public string Stdname
+    //    {
+    //        set
+    //        {
+    //            Console.WriteLine("This is a Set accesser for stdname ");
+    //            stdname = value;
+    //        }
+    //        get
+    //        {
+    //            Console.WriteLine("This is Get accesser for stdname");
+    //            return stdname;
+    //        }
+    //    }
+
+    }
+    class Program
+    {
+       static void Main(string[] args)
+        {
+            students stu = new students();
+            stu.stdid = 123;
+            stu.stdname = "Kholi";
+            stu.stdgmail = "support@gmail.com";
+            Console.WriteLine(stu.stdid);
+            Console.WriteLine(stu.stdname);
+            Console.WriteLine(stu.stdgmail);
+        }
+    }
+}

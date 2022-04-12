@@ -1,0 +1,83 @@
+using System;
+using System.Collections; //namespace required for arraylist nongeneric collection type
+using System.Collections.Generic;
+
+namespace Collection
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //generic class list,stack ,sortedlist,queue,dictionary,hashset
+
+            List<int> NumberList = new List<int>();
+            NumberList.Add(100);
+            NumberList.Add(200);
+            NumberList.Add(300);
+            NumberList.Add(500);
+            foreach(int i in NumberList)
+            {
+                Console.WriteLine(i);
+            }
+
+            List<string> cities = new List<string>();
+            cities.Add("Hydrabad");
+            cities.Add("Pune");
+            cities.Add("Mumbai");
+            List<string> myfavcity = new List<string>();
+            myfavcity.AddRange(cities);//AddRange method use for collecting  the list of string in genreic collection 
+            foreach(string a in myfavcity)
+            {
+                Console.WriteLine(a);
+            }
+
+            cities.Insert(1, "nanded");
+            foreach (string a1 in cities)
+            {
+                Console.WriteLine(a1);
+            }
+
+
+
+
+            string[] color = new string[] { "red", "green", "yellow","white","black","skyblue","blue","darkblue" };//array of list in generic collection
+            List<string> colorlist = new List<string>();
+            colorlist.AddRange(color);
+            foreach(string clr in colorlist)
+            {
+                Console.WriteLine(clr);
+            }
+
+
+            //array number list in genric collection
+            int[] number = new int[] { 1, 2, 3, 4, 5, 6 };
+            List<int> numberlist = new List<int>();
+            numberlist.AddRange(number);
+            foreach(int num in numberlist)
+            {
+                Console.WriteLine(num);
+            }
+
+            Console.WriteLine("After Removing The 100 from the numberlist");
+            NumberList.Remove(100);
+            
+            foreach (int i in NumberList)
+            {
+                Console.WriteLine(i);
+            }
+
+            Console.WriteLine("After Removing The index number 2 element from the numberlist");
+            NumberList.RemoveAt(2);
+            foreach (int i in NumberList)
+            {
+                Console.WriteLine(i);
+            }
+
+            cities.InsertRange(2, color);
+            foreach (string a in cities)
+            {
+                Console.WriteLine(a);
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+using System;
+using System.Linq;
+using System.Collections.Generic;
+namespace LinqToString
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            //linq to string............................................................................................
+
+            Console.WriteLine("Hello World!");
+            string str = "Welcome To Dotnet World";
+            var result = from s in str.ToLowerInvariant().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                         select s;
+
+            foreach(var item in result)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine("This is Distinct ");
+
+
+            string str2 = "hello good morning hello Kepp smiling";
+            var result1 = from d in str2.ToLowerInvariant().Split().Distinct()
+                          select d;
+            foreach (var item1 in result1)
+            {
+                Console.WriteLine(item1);
+            }
+
+            //linq to  string array.................................................................................................
+
+            string[] arr1 = { "sanju", "manju","sinku","Pintu","chintu"};
+            IEnumerable<string> result3 = from strarr in arr1
+                                          where
+                      strarr.ToLowerInvariant().StartsWith("s")
+                                          select strarr;
+
+            foreach (var item2 in result3)
+            {
+                Console.WriteLine(item2);
+            }
+
+            //linq to int array................................................................................................
+            Console.WriteLine("The Number Greater Than 40 Are");
+            int[] intarr = { 1, 2, 3, 4, 5, 6, 7, 78, 8, 9, 0, 67, 78, 99 };
+            IEnumerable<int> result4 = from x in intarr
+                                       where x > 40
+                                       select x;
+            foreach (var item3 in result4)
+            {
+                Console.WriteLine(item3);
+            }
+
+
+
+
+        }
+    }
+}

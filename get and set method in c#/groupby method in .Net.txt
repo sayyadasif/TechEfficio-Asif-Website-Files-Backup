@@ -1,0 +1,41 @@
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+namespace ConsoleApp10
+{
+    class Program
+    {
+
+        public class student
+        {
+            public string name { get; set; }
+            public string subject { get; set; }
+            public string location { get; set; }
+        }
+
+        static void Main(string[] args)
+        {
+
+            List<student> stdsobj = new List<student>()
+            {
+                new student(){name="sanju",subject="Dotnet",location="Nanded"},
+                new student(){name="pintu",subject="java",location="Pune"},
+                new student(){name="bablu",subject="c#",location="Solapur"},
+                new student(){name="raju",subject="j#",location="Nanded"},
+                new student(){name="Gopi",subject="f#",location="Pune"}
+            };
+            var students = stdsobj.GroupBy(x => x.location);
+            foreach(var stud in students)
+            {
+                Console.WriteLine(stud.Key+" "+stud.Count());
+
+                foreach(var item in stud)
+                {
+                    Console.WriteLine("Name: "+item.name+" Loacation: "+item.location);
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,84 @@
+viewdata is dictionary which consist of key and value pair 
+key must be a string 
+ViewData["key"]=value;
+
+@ViewData["key"];
+
+
+ public IActionResult DisplayName()
+        {
+            ViewData["name"] = "Asif";
+            return View();
+        }
+
+        public IActionResult ShowEmp()
+        {
+            ViewData["Title"] = "Employee Detailes";
+            ViewData["Datetime"] = DateTime.Now.ToString();
+            Employee emp = new Employee()
+            {
+                eno = 1,
+                name = "kholi",
+                job = "Developer",
+                sal = 600000
+            };
+            ViewData["employee"] = emp;
+
+            return View();
+        }
+
+
+
+////////////////
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DisplayName</title>
+</head>
+<body>
+    <h1 style="color: #dcdf12; background: #8b7c51">Welcome @ViewData["name"] </h1>
+</body>
+</html>
+
+
+/////////////////
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ViewDate["Title"]</title>
+</head>
+<body>
+   @{ 
+       var employee = ViewData["employee"] as WebApplication6.Models.Employee;
+
+   }
+    <div>
+
+        Employee id: @employee.eno;<br />
+        Emloyee Name: @employee.name;<br />
+        Employee Job: @employee.job:<br />
+        Employee salary: @employee.sal;
+    </div>
+</body>
+</html>
+
+
+////////////////////
+
+ViewBag.key=value;
+@ViewBag.key;

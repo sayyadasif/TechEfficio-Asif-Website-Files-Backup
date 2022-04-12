@@ -1,0 +1,6 @@
+C:\Program Files\Android\Android Studio
+
+C:\Program Files (x86)
+
+
+C:\Users\Hp\AppData\Local\Android\Sdk\emulator

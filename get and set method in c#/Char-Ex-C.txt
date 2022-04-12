@@ -1,0 +1,12 @@
+4)WAP  TO DISPLAY CHAR
+
+#include <stdio.h>
+#include<conio.h>
+    
+int main()
+{
+    char Name[]="Programs";
+
+    printf("%c",*Name);
+    
+}

@@ -1,0 +1,75 @@
+
+link====https://stackoverflow.com/questions/26695332/vertical-divs-that-expand-and-contract-on-click
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+body > div {
+  transition: all 0.3s;
+  float: left;
+  height: 100%;
+  width: 20%;
+}
+body > div:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.one {
+  background-color: #ffccaa;
+}
+.two {
+  background-color: #ffffcc;
+}
+.three {
+  background-color: #aabbcc;
+}
+.four {
+  background-color: #cccccc;
+}
+.five {
+  background-color: #ff11bb;
+}
+.selected {
+  width: 80%;
+}
+.selected:hover {
+  transform: scale(1);
+}
+.hide {
+  width: 0;
+}
+</style>
+</head>
+<body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<div class="one"></div>
+<div class="two"></div>
+<div class="three"></div>
+<div class="four"></div>
+<div class="five"></div>
+
+<script>
+$('body > div').on('click', function() {
+  $(this).toggleClass('selected').siblings().toggleClass('hide');
+});
+
+</script>
+
+</body>
+</html> 

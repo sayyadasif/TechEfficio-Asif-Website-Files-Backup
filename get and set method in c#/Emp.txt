@@ -1,0 +1,9 @@
+ //Employee emp1 = new Employee();
+            //emp1.eno =2;
+            //emp1.Ename = "Suraj";
+            //emp1.Course = "ASP.NET ";
+
+            //List<Employee> mylist = new List<Employee>();
+            //mylist.Add(emp);
+            //mylist.Add(emp1);
+            //return View(mylist);

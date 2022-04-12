@@ -1,0 +1,14 @@
+
+3) WAP TO DISPLAY CITYNAME
+
+#include <stdio.h>
+#include <conio.h>
+int main(){
+	
+     char cityname[] = "Pune";
+     printf("%s",cityname);
+    getch(); 
+     
+    
+    
+}

@@ -1,0 +1,33 @@
+using System;
+using System.Collections; //namespace required for arraylist nongeneric collection type
+using System.Collections.Generic;//namespace required for generic collection type 
+
+namespace Collection
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            SortedList<int, string> NumberNames = new SortedList<int, string>();//sorted list in generic collection
+            NumberNames.Add(1, "One");
+            NumberNames.Add(2, "Two");
+            NumberNames.Add(3, "Three");
+            foreach(KeyValuePair<int,string> kvp in NumberNames)//keyValuePair 
+            {
+                Console.WriteLine(kvp);
+            }
+            Console.WriteLine(NumberNames[1]);
+
+            string result;
+            if (NumberNames.TryGetValue(3, out  result))
+            {
+                Console.WriteLine(3 + result);
+            }
+
+            for (int i = 0; i < NumberNames.Count; i++)
+            {
+                Console.WriteLine(i+"="+NumberNames.Values[i]);
+            }
+        }
+    }
+}
